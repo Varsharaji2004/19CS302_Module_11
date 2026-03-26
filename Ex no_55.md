@@ -4,23 +4,41 @@
 To write a C program to find a square of number using function with arguments without return type.
 
 ## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+1. Start
+2. Define a function findSquare(num) that takes an integer argument.
+3. Inside the function, compute num * num and display the result.
+4. In the main() function:
+Accept an integer input from the user.
+Call findSquare(number) with the input value.
+5. End
 
 ## Program:
 ```
 /*
 C program to find a square of number using function with arguments without return type.
-Developed by: 
-RegisterNumber:  
+
+#include <stdio.h>
+
+void findSquare(int num) {
+    printf("Square of %d is: %d\n", num, num * num);
+}
+
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    findSquare(number);
+    
+    return 0;
+} 
 */
 ```
 
+
 ## Output:
 
+<img width="422" height="201" alt="image" src="https://github.com/user-attachments/assets/cf6d8008-b7d6-410a-b848-637b7dcfff38" />
 
 
 ## Result:
