@@ -4,23 +4,76 @@
 To write a C program to remove duplicates in an array.
 
 ## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+1. Start
+2. Input the number of elements n.
+3. Input n elements into the array.
+4. Create an empty temporary array temp to store unique elements.
+5. Initialize an index variable index = 0.
+6. Loop through each element in the original array:
+7. Check if the element already exists in temp.
+If the element is not a duplicate, add it to temp and increment index.
+Copy the elements from temp back to the original array.
+8. Update n to the new size of the array.
+9. Print the modified array without duplicates.
+10. End
 
 ## Program:
 ```
 /*
 C program to remove duplicates in an array
-Developed by: 
-RegisterNumber:  
+
+#include <stdio.h>
+
+void removeDuplicates(int arr[], int *n) {
+    int temp[*n];
+    int index = 0;
+
+    for (int i = 0; i < *n; i++) {
+        int duplicate = 0;
+        for (int j = 0; j < index; j++) {
+            if (arr[i] == temp[j]) {
+                duplicate = 1;
+                break;
+            }
+        }
+        if (!duplicate) {
+            temp[index++] = arr[i];
+        }
+    }
+
+    for (int i = 0; i < index; i++) {
+        arr[i] = temp[i];
+    }
+
+    *n = index;
+}
+
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    removeDuplicates(arr, &n);
+
+    printf("Array after removing duplicates: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
 */
 ```
 
 ## Output:
 
+<img width="455" height="251" alt="image" src="https://github.com/user-attachments/assets/5402a846-0b0f-4e59-ad8f-e37b04ae7c3a" />
 
 
 ## Result:
